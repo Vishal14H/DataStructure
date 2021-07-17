@@ -14,8 +14,12 @@ public class SinglyLinkedList {
         }
     }
 
-    void insertFirst(int data){
-
+    void insertFirst(int data)
+    {
+        Node new_data = new Node(data);
+        Node temp = head;
+        head = new_data;
+        head.next = temp;
     }
 
         void add(int data)
@@ -47,6 +51,8 @@ public class SinglyLinkedList {
         sll.add(13);
         sll.add(63);
         sll.add(43);
+        sll.insertFirst(22);
+        sll.insertFirst(55);
         sll.display();
     }
     }
