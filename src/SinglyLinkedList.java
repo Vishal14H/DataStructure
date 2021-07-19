@@ -161,6 +161,23 @@ public class SinglyLinkedList {
             return false; // data not found
         }
 
+        // to find the element at nth node
+    public void nthIndex(int index)
+    {
+
+            int count = 0;
+            Node temp = head;
+            while (temp != null) {
+                if (count == index) {
+
+                    System.out.println("Nth index item is: "+ temp.data );
+                }
+                count++;
+                temp = temp.next;
+            }
+
+            assert (false);
+    }
 
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
@@ -187,7 +204,7 @@ public class SinglyLinkedList {
         sll.deleteNode(1);
         sll.deleteNode(2);
         sll.deleteNode(3);
-        sll.searchKey(8);
+        sll.nthIndex(5);
         sll.display();
     }
     }
