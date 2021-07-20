@@ -66,11 +66,30 @@ public class CircularLinkedList
             length++;
         }
 
+        public void insertLast(int data)
+        {
+            Node temp = new Node(data);
+            if(last == null)
+            {
+                last=temp;
+                last.next=last;
+            }
+            else
+            {
+                temp.next=last.next;
+                last.next=temp;
+                last=temp;
+            }
+            length++;
+        }
+
 
     public static void main(String[] args) {
         CircularLinkedList cll = new CircularLinkedList();
         cll.createcircularLinkedList();
         cll.insetFirst(9);
+        cll.insertLast(31);
+        cll.insertLast(91);
         cll.display();
     }
 
