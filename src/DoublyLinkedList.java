@@ -125,13 +125,18 @@ public class DoublyLinkedList
         DoublyLinkedList dll = new DoublyLinkedList();
         dll.insertFirst(23);
         dll.insertFirst(34);
+        dll.insertLast(45);
+        dll.insertFirst(91);
+        dll.insertLast(69);
         dll.insertLast(56);
         dll.insertLast(90);
       //  dll.reverseDisplay();
       //  System.out.println();
         dll.deleteFirst();
         dll.deleteLast();
+        dll.deleteLast();
         dll.display();
+
     }
 
 }
